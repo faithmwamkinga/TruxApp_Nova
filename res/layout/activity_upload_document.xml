@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.UploadDocument">
+
+
+    <TextView
+        android:id="@+id/tvPersonalDocument"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="Personal Documents"
+        android:textColor="#D36D23"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPersonalDoc"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:text="Document Reference Number"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPersonalDocument" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPersonalNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPersonalDoc">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPersonalNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_style" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvDatePersonal"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:text="Document Issue Date"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilPersonalNumber" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilDatePersonal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDatePersonal">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etDatePersonal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_style"
+            android:drawableEnd="@drawable/baseline_calendar_today_24"
+            android:focusable="false"
+            android:onClick="showDatePickerDialog" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvPersonalExpiryDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:text="Document Expiry Date"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilDatePersonal" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPersonalDocExpiryDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/tvPersonalExpiryDate">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPersonalDocExpiryDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_style"
+            android:drawableEnd="@drawable/baseline_calendar_today_24"
+            android:focusable="false"
+            android:onClick="showDatePickerExpiryDialog" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--    <CheckBox-->
+<!--        android:id="@+id/cbxPassport"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="32dp"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:shadowColor="@color/black"-->
+<!--        android:text="Passport"-->
+<!--        android:textSize="14sp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvPersonalDocType" />-->
+
+
+<!--    <CheckBox-->
+<!--        android:id="@+id/cbxDrivingLicense"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="32dp"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:text="Driving License"-->
+<!--        android:textSize="14sp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/cbxPassport" />-->
+
+<!--    <CheckBox-->
+<!--        android:id="@+id/cbxHealth"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="32dp"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:text="Health certificate"-->
+<!--        android:textSize="14sp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/cbxDrivingLicense" />-->
+
+
+    <!--        android:id="@+id/buttonSave"-->
+    <!--        android:layout_width="150dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="48dp"-->
+    <!--        android:layout_marginEnd="32dp"-->
+    <!--        android:background="@drawable/button_style2"-->
+    <!--        android:text="Save"-->
+    <!--        app:backgroundTint="#D36D23"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/ivAddImage" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/buttonCancel"-->
+    <!--        android:layout_width="150dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="32dp"-->
+    <!--        android:background="@drawable/button_style"-->
+    <!--        android:text="Cancel"-->
+    <!--        android:textColor="@color/black"-->
+    <!--        app:backgroundTint="#D36D23"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/buttonSave" />-->
+
+
+    <TextView
+        android:id="@+id/tvPersonalDocType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:text="Type of Dcuments"
+        android:textColor="#D36D23"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilPersonalDocExpiryDate" />
+
+    <TextView
+        android:id="@+id/tvAddPersonalImage"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Upload a document"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupDocumentType" />
+
+    <ImageView
+        android:id="@+id/ivAddPersonalImage"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddPersonalImage"
+        app:srcCompat="@drawable/baseline_drive_folder_upload_24" />
+
+    <Button
+        android:id="@+id/buttonCancelPersonalDoc"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/cancel_button"
+        android:text="Cancel"
+        android:textColor="@color/black"
+        app:backgroundTint="#D36D23"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivAddPersonalImage" />
+
+    <Button
+        android:id="@+id/buttonSavePersonalDoc"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/button_submit"
+        android:text="Save"
+        app:backgroundTint="#D36D23"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonCancelPersonalDoc"
+        app:layout_constraintTop_toTopOf="@+id/buttonCancelPersonalDoc" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupDocumentType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPersonalDocType">
+
+        <RadioButton
+            android:id="@+id/rbpassport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Passport" />
+
+        <RadioButton
+            android:id="@+id/rbdrivinglicense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Driving License" />
+
+        <RadioButton
+            android:id="@+id/rbhealth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Health Certificate" />
+    </RadioGroup>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

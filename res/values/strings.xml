@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Trux_Application</string>
+    <string name="first_name_is_required">First Name is required</string>
+    <string name="last_name_is_required">Last Name is required</string>
+    <string name="vehicle_number_is_required">Vehicle Number is required</string>
+    <string name="password_required">Password required</string>
+    <string name="email_is_required">Email is required</string>
+    <string name="phone_number_is_required">Phone number is required</string>
+    <string name="licence_number_is_required">Licence number is required</string>
+    <string name="confirm_your_password">Confirm your password</string>
+    <string name="password_confirmation_does_not_match_the_password">Password confirmation does not match the password</string>
+    <string name="confirm_password_is_required">ConfirmPassword</string>
+</resources>
